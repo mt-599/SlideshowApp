@@ -64,6 +64,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             let magViewCon = segue.destination as! MagViewController
             magViewCon.magImage = slideImageView.image
             stopSlideShow()
+            fStartSlide = false
         }
     }
     
