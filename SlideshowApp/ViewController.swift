@@ -14,7 +14,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var startStopBtn: UIButton!
     var dispImageNum: Int = 0
-    let imgName:[String] = ["image1","image2","image3"]
+    let imgName:[String] = ["img1.jpeg","img2.jpeg","img3.jpeg"]
     var timer: Timer!
     var fStartSlide: Bool = false
 
@@ -70,14 +70,14 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func startSlideShow(){
         startTimer()
-        forwardBtn.isHidden = true//進む戻るボタンを無効にする
-        backBtn.isHidden = true//進む戻るボタンを無効にする
+        forwardBtn.isEnabled = false//進む戻るボタンを無効にする
+        backBtn.isEnabled = false//進む戻るボタンを無効にする
         startStopBtn.setTitle("停止", for: .normal)//停止ボタンに変える
     }
     func stopSlideShow(){
         stopTimer()
-        forwardBtn.isHidden = false//進む戻るボタンを有効にする
-        backBtn.isHidden = false//進む戻るボタンを有効にする
+        forwardBtn.isEnabled = true//進む戻るボタンを有効にする
+        backBtn.isEnabled = true//進む戻るボタンを有効にする
         startStopBtn.setTitle("再生", for: .normal)//再生ボタンに変える
     }
 
